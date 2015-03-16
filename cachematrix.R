@@ -35,18 +35,29 @@ cacheSolve <- function(x, ...) {
     i    
 }
 
-##############
-## Test case 
-##############
+####################
+## Tests / Examples 
+####################
 # cache = makeCacheMatrix()
 #
 # myMatrix=matrix(c(4,2,6,8),2,2) # arbitrary 2x2 matrix
 # cache$set(myMatrix)
 # myMatrix_Inv = cacheSolve(cache)
-# myMatrix_Inv %*% myMatrix # multiple original by its inverse to get 1
+# myMatrix_Inv %*% myMatrix # multiple original by its inverse - always get matrix I below
 #
 #       [,1] [,2]
 # [1,]    1    0
 # [2,]    0    1
+
+## make sure it gets cached data when called a second time (check that it prints the message)
+# myMatrix_Inv = cacheSolve(cache)
+# getting cached data
+
+## change the matrix, make sure it recomputes and recaches the new inverse
+# newMatrix=matrix(c(3,4,2,5),2,2)
+# cache$set(newMatrix)
+# newMatrix_Inv = cacheSolve(cache)
+
+
 
 
