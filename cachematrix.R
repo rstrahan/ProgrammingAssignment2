@@ -43,7 +43,7 @@ cacheSolve <- function(x, ...) {
 # myMatrix=matrix(c(4,2,6,8),2,2) # arbitrary 2x2 matrix
 # cache$set(myMatrix)
 # myMatrix_Inv = cacheSolve(cache)
-# myMatrix_Inv %*% myMatrix # multiple original by its inverse - always get matrix I below
+# myMatrix_Inv %*% myMatrix # multiply original by its inverse - always get matrix I below
 #
 #       [,1] [,2]
 # [1,]    1    0
